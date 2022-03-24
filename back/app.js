@@ -1,9 +1,11 @@
 // import express from 'express';
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
+const cors = require('cors');
 
 const app = express();
 
+app.use(cors({origin: '*'}))
 
 const db = new sqlite3.Database('blog.db');
 
